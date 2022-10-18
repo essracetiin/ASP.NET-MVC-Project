@@ -1,0 +1,22 @@
+﻿@model Keresus.Data.Egitim
+@{
+    ViewData["Title"] = "Guncel";
+}
+
+<div class="row">
+    <div class="col-md-5">
+        <h1>Eğitim Güncelleme</h1>
+        <hr />
+        <form method="post">
+            <div>
+                <label>Eğitim Id</label>
+                <input class="form-control" type="text" value="@Model.EgitimId" name="EgitimId" />
+            </div>
+            <div>
+                <label>Ad</label>
+                <input class="form-control" type="text" value="@Model.EgitimAd" name="EgitimAd" />
+            </div>
+            <input class="btn btn-outline-success" type="submit" value="Güncelle" />
+        </form>
+    </div>
+</div>

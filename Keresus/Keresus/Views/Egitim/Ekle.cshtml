@@ -1,0 +1,18 @@
+﻿@model Keresus.Data.Egitim
+@{
+    ViewData["Title"] = "Ekle";
+}
+<div class="row">
+    <div class="col-md-5">
+        <h1>Eğitim Ekle</h1>
+        <hr />
+        <form method="post">
+            
+            <div>
+                <label>Ad</label>
+                <input class="form-control" type="text" value="@Model.EgitimAd" name="EgitimAd" />
+            </div>
+            <input class="btn btn-outline-primary" type="submit" value="Ekle" />
+        </form>
+    </div>
+</div>

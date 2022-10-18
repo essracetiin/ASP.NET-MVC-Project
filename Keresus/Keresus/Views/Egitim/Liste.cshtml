@@ -1,0 +1,32 @@
+﻿@model List<Keresus.Data.Egitim>
+@{
+    ViewData["Title"] = "Liste";
+}
+
+<h1>Eğitim Listesi</h1>
+<a class="btn btn-outline-primary" href="/Egitim/Ekle">Yeni Giriş</a>
+<div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>EğitimId</th>
+                    <th>Eğitim Adı</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.EgitimId</td>
+                        <td>@item.EgitimAd</td>
+                        <td><a class="btn btn-outline-success" href="@Url.Action("Guncel", "Egitim", new { EgitimId = @item.EgitimId})">Güncelle</a></td>
+                        <td><a class="btn btn-outline-danger" href="@Url.Action("Sil", "Egitim", new { EgitimId = @item.EgitimId})">Sil</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
